@@ -14,12 +14,12 @@ A simple wrapper app that connects to your Hoodik instance.
 
 | Description                                 | Screenshot                                                                                                                                                       |
 |---------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Select Instance                             | ![Select Instance](https://qu.ax/TlbPX.png){: width="400" height="300" alt="A screenshot showing the select instance screen."}                               |
-| Login Screen                                | ![Login Screen](https://qu.ax/xgLTa.png){: width="400" height="300" alt="A screenshot of the login screen for the app."}                                     |
-| Create Account Screen                       | ![Create Account](https://qu.ax/UthQu.png){: width="400" height="300" alt="A screenshot of the create account screen."}                                      |
-| Main Screen with Wide Sidebar               | ![Main Screen - Sidebar](https://qu.ax/togJL.png){: width="400" height="300" alt="A screenshot showing the main screen with a wide sidebar."}                |
-| Main Screen with Upload Menu                | ![Main Screen - Upload Menu](https://qu.ax/YjECP.png){: width="400" height="300" alt="A screenshot of the main screen with the upload menu visible."}       |
-| Image Preview                               | ![Image Preview](https://qu.ax/ktVeF.png){: width="400" height="300" alt="A screenshot showing an image preview within the app."}                            |
+| Select Instance                             | ![Select Instance](https://qu.ax/TlbPX.png)                               |
+| Login Screen                                | ![Login Screen](https://qu.ax/xgLTa.png)                                     |
+| Create Account Screen                       | ![Create Account](https://qu.ax/UthQu.png)                                      |
+| Main Screen with Wide Sidebar               | ![Main Screen - Sidebar](https://qu.ax/togJL.png)                |
+| Main Screen with Upload Menu                | ![Main Screen - Upload Menu](https://qu.ax/YjECP.png)       |
+| Image Preview                               | ![Image Preview](https://qu.ax/ktVeF.png)                            |
 
 ---
 
