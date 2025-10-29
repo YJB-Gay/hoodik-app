@@ -1,0 +1,22 @@
+# python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# config
+config.json
+
+# temp files
+private_key.pem
+
+# ide
+.vscode/
+.idea/
+*.swp
+
+# os
+.DS_Store
+Thumbs.db
