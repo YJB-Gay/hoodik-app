@@ -462,7 +462,6 @@ def cmd_download(args):
         print('error: private key not found in config')
         sys.exit(1)
     
-    # get file metadata
     resp = request('GET', f'/api/storage/{args.id}/metadata')
     if resp.status_code != 200:
         print(f'error getting file metadata: {resp.status_code}')
@@ -471,7 +470,6 @@ def cmd_download(args):
     
     file_info = resp.json()
     
-    # decrypt the AES key
     encrypted_key = file_info.get('encrypted_key')
     if not encrypted_key:
         print('error: file has no encrypted key')
@@ -484,7 +482,6 @@ def cmd_download(args):
         print(f'error decrypting file key: {e}')
         sys.exit(1)
     
-    # decrypt filename
     encrypted_name = file_info.get('encrypted_name')
     try:
         encrypted_name_bytes = crypto.bytes_from_hex(encrypted_name)
@@ -494,7 +491,6 @@ def cmd_download(args):
         print(f'error decrypting filename: {e}')
         sys.exit(1)
     
-    # use provided output path or decrypted filename
     output_path = args.output if args.output else decrypted_name
     
     print(f'downloading {decrypted_name} -> {output_path}')
@@ -502,7 +498,6 @@ def cmd_download(args):
     chunks = file_info.get('chunks', 1)
     file_data = b''
     
-    # download all chunks
     for chunk_num in range(chunks):
         print(f'downloading chunk {chunk_num + 1}/{chunks}...', end='\r')
         
@@ -526,10 +521,8 @@ def cmd_download(args):
             print(resp.text)
             sys.exit(1)
         
-        # decrypt chunk
         encrypted_chunk = resp.content
         try:
-            # Server returns AES-encrypted data with 16-byte IV prepended
             decrypted_chunk = crypto.aes_decrypt(encrypted_chunk, file_key)
             file_data += decrypted_chunk
         except Exception as e:
@@ -538,13 +531,12 @@ def cmd_download(args):
             print(f'key length: {len(file_key)} bytes')
             sys.exit(1)
     
-    print(f'\n✓ downloaded {len(file_data)} bytes')
+    print(f'\ndownloaded {len(file_data)} bytes')
     
-    # write to file
     with open(output_path, 'wb') as f:
         f.write(file_data)
     
-    print(f'✓ saved to {output_path}')
+    print(f'saved to {output_path}')
 
 def cmd_delete(args):
     resp = request('DELETE', f'/api/storage/{args.id}')
