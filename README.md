@@ -2,6 +2,8 @@
 
 A simple wrapper app that connects to your Hoodik instance.
 
+There's also a [CLI tool](./cli/) if you prefer terminal workflows.
+
 ## What It Does
 
 - Shows the connection screen on startup.
