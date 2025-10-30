@@ -105,13 +105,13 @@ stored at `~/.config/hoodik/config.json`
 
 ## features
 
-- ✅ login with 2FA (auto-generate or manual)
-- ✅ session persistence with JWT
-- ✅ full client-side encryption (AES-256 + RSA-2048)
-- ✅ file upload with chunking (4MB chunks)
-- ✅ file download with decryption
-- ✅ directory management
-- ✅ file listing and search
-- ✅ storage stats
-- ✅ admin user management
-- ✅ auto-polling for upload completion
+- login with 2FA (auto-generate or manual)
+- session persistence with JWT
+- full client-side encryption (AES-256 + RSA-2048)
+- file upload with chunking (4MB chunks)
+- file download with decryption
+- directory management
+- file listing and search
+- storage stats
+- admin user management
+- auto-polling for upload completion
